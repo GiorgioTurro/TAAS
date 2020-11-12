@@ -1,0 +1,29 @@
+<body>
+  <div class="p-grid ">
+      <div class="p-col-6" >
+        <div class="title">
+          <h1>Drink Take-Away</h1>
+        </div>
+        <div class="input-group">
+          <span class="p-float-label">
+            <input id="username-input" type="text" pInputText [(ngModel)]="Username">
+            <label for="float-input">Username</label>
+          </span>
+          <br><br>
+          <span class="p-float-label">
+            <input id="password-input" type="password" pInputText [(ngModel)]="Password">
+            <label for="float-input">Password</label>
+          </span>
+          <br><br>
+          <div class="button-group">
+            <button pButton pRipple type="button" label="Login" class="p-button-secondary" style="margin:6px; width:100%;" [disabled]="Password==='' || Username===''"></button>
+          <a routerLink="/register"><button pButton pRipple type="button" label="Register" class="p-button-secondary reg-button" style="margin:6px; width:100%;"></button></a>
+            <div class="g-signin2" data-onsuccess="onSignIn" style="margin:6px; width:100%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="p-col-6">
+        <img src="assets\images\iri-white-paper-birra-2020-pinta-boccale.jpg" alt="beers">
+      </div>
+  </div>
+</body>
