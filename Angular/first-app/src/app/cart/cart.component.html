@@ -1,1 +1,32 @@
-<p>cart works!</p>
+<div class="cart-title">
+  <h3>Your Cart</h3>
+</div>
+<hr>
+<p-table  >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Products</th>
+            <th>#</th>
+            <th>Price</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body">
+        <tr >
+            <td>-</td>
+            <th>-</th>
+            <td>0.00</td>
+        </tr>
+    </ng-template>
+</p-table>
+<hr>
+<div class="subtotal">
+  <div class="subtotal-label">
+    <h2>Subtotal:</h2>
+  </div>
+  <div class="subtotal-amount">
+    <!-- <h2><b>€ {{ subtotal }}</b></h2> -->
+  </div>
+</div>
+<hr>
+<!-- <button pButton pRipple id="empty-button" type="button" label="Empty Cart" class="p-button-secondary" style="margin:auto; width:100%; margin-bottom:6px;" (click)=onEmptyCart()></button> -->
+<!-- <button pButton pRipple type="button" label="Order Now" class="p-button-secondary" style="margin:auto; width:100%;" ></button> -->

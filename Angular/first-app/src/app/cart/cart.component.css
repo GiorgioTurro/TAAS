@@ -1,0 +1,34 @@
+.p-button-secondary{
+  background-color: #222;
+}
+
+.p-button-secondary:hover{
+  background-color: white !important;
+  color: #222 !important;
+}
+
+.cart-title{
+  text-align: center;
+}
+
+.subtotal>b{
+  text-align: right;
+}
+
+#empty-button{
+  background-color: white !important;
+  color: #222 !important;
+}
+#empty-button:hover{
+  background-color: #222 !important;
+  color: white !important;
+}
+
+.subtotal{
+  display: -webkit-inline-box;
+  align-items: flex-end;
+}
+
+button{
+  margin: 6px;
+}

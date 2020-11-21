@@ -13,7 +13,10 @@ import { CartComponent } from './cart/cart.component';
 import { ShopComponent } from './shop/shop.component';
 import { MenuComponent } from './shop/menu/menu.component';
 import { CategoryComponent } from './shop/menu/category/category.component';
-import { ProductComponent } from './shop/menu/category/product/product.component';
+import { TableModule } from 'primeng/table';
+import { MarkerService } from './_services/marker.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -25,15 +28,16 @@ import { ProductComponent } from './shop/menu/category/product/product.component
     CartComponent,
     ShopComponent,
     MenuComponent,
-    CategoryComponent,
-    ProductComponent
+    CategoryComponent
       ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    TableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderService } from '../shop/order.service';
+import { Product } from '../shop/shared/product.model';
 
 @Component({
   selector: 'app-cart',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+// subtotal: number = 0.00;
+  constructor(private orderService: OrderService) {
   }
+//
+  ngOnInit() {
+  }
+  // onEmptyCart(){
+// subtotal=this.orderService.onCalculateSubtotal();
+//   return this.orderService.onEmptyOrder();
+// }
 
 }
