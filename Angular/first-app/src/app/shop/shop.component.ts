@@ -34,7 +34,6 @@ menu2: Product[];
       new Shop('Un Altro', 'Viale Altrove, 99', 'Torino', this.menu)
     ];
   this.selectedShop=this.shops[0];
-  // console.log(this.order);
   }
 
   onAddToOrder(p: Product){

@@ -16,7 +16,7 @@ import { CategoryComponent } from './shop/menu/category/category.component';
 import { TableModule } from 'primeng/table';
 import { MarkerService } from './_services/marker.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { PopUpService } from './_services/popup.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,10 @@ import { HttpClientModule } from '@angular/common/http';
     TableModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    MarkerService,
+    PopUpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
