@@ -1,8 +1,14 @@
 {
   "type": "FeatureCollection",
   "features": [
-    {"type":"Feature", "geometry":{ "type":"Point", "coordinates":[7.6955659, 45.0646803]}, "properties":{"name":"Jumping", "type":"pub", "address": "Via Roma, 102", "city":"Torino"}},
-    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.683251, 45.064412]}, "properties":{"name":"Clorophilla", "type":"BelLocale", "address": "Corso Lecce, 12", "city":"Torino"}},
-    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.659841, 45.071133]}, "properties":{"name":"Irish Pub", "type":"Pub", "address": "Viale Nizza, 38", "city":"Torino"}}
+    {"type":"Feature", "geometry":{ "type":"Point", "coordinates":[7.6955659, 45.0646803]}, "properties":{"name":"Jumping Jester", "type":"pub", "address": "Via Roma, 102", "city":"Torino"}},
+    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.6944488, 45.0655545]}, "properties":{"name":"Clorophilla", "type":"BelLocale", "address": "Piazza Vittorio Veneto, 17", "city":"Torino"}},
+    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.659841, 45.071133]}, "properties":{"name":"Irish Pub", "type":"Pub", "address": "Viale Nizza, 38", "city":"Torino"}},
+    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.6840911, 45.0655938]}, "properties":{"name":"La Rhumerie 18", "type":"Cocktail Bar", "address": "Via Maria Vittoria, 49", "city":"Torino"}},
+    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.6891726, 45.0650854]}, "properties":{"name":"L'alchimista", "type":"Cocktail Bar", "address": "Via delle Rosine, 10", "city":"Torino"}},
+    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.694309, 45.0647357]}, "properties":{"name":"Soho.23", "type":"Cocktail Bar", "address": "Piazza Vittorio Veneto, 23F", "city":"Torino"}},
+    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.694309, 45.0647357]}, "properties":{"name":"La Drogheria", "type":"Cocktail Bar", "address": "Piazza Vittorio Veneto, 18/D", "city":"Torino"}},
+    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.694309, 45.0647357]}, "properties":{"name":"Al Bona", "type":"Cocktail Bar", "address": "Via Alfonso Bonafus, 2", "city":"Torino"}},
+    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.694309, 45.0647357]}, "properties":{"name":"Dev Keller", "type":"Pub", "address": "Via Maria Vittoria, 45", "city":"Torino"}},
       ]
 }
