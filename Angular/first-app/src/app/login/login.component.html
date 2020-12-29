@@ -16,9 +16,26 @@
           </span>
           <br><br>
           <div class="button-group">
-            <button pButton pRipple type="button" label="Login" class="p-button-secondary" style="margin:6px; width:100%;" [disabled]="Password==='' || Username===''"></button>
+            <!-- <button pButton pRipple type="button" label="Login" class="p-button-secondary" style="margin:6px; width:100%;" [disabled]="Password==='' || Username===''"></button>
           <a routerLink="/register"><button pButton pRipple type="button" label="Register" class="p-button-secondary reg-button" style="margin:6px; width:100%;"></button></a>
             <div class="g-signin2" data-onsuccess="onSignIn" style="margin:6px; width:100%;"></div>
+
+            <div class="container unauthenticated">
+              <a href="localhost:8888/auth" type="submit" class="btn btn-lg btn-success"
+               style="align : center">Continue with Facebook</a>
+             
+         </div>-->
+
+
+
+         <button *ngIf="!isLogged" class="btn btn-outline-danger btn-lg btn-block" (click)="signInWithGoogle()">
+            <i class="fab fa-google"></i> Accedi con Google</button>
+          <button *ngIf="!isLogged" class="btn btn-outline-primary btn-lg btn-block" (click)="signInWithFB()">
+            <i class="fab fa-facebook"></i> Accedi con Facebook</button>
+            <button *ngIf="isLogged" class="btn btn-outline-danger my-2 my-sm-0" type="submit" (click)="logOut()">
+              <i class="fas fa-sign-out-alt fa-lg"></i> Log out</button>
+
+         
           </div>
         </div>
       </div>
@@ -26,4 +43,5 @@
         <img src="assets\images\iri-white-paper-birra-2020-pinta-boccale.jpg" alt="beers">
       </div>
   </div>
+  <app-users-list> </app-users-list>
 </body>
