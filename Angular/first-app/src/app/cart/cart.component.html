@@ -1,32 +1,51 @@
-<div class="cart-title">
+<div class="cart-title" [hidden]="this.orderService.paidFor==true">
   <h3>Your Cart</h3>
 </div>
 <hr>
-<p-table  >
-    <ng-template pTemplate="header">
-        <tr>
-            <th>Products</th>
-            <th>#</th>
-            <th>Price</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body">
-        <tr >
-            <td>-</td>
-            <th>-</th>
-            <td>0.00</td>
-        </tr>
-    </ng-template>
-</p-table>
+<div class="card-empty-cart" [hidden]="this.orderService.subtotal>0 || this.orderService.paidFor==true">
+  <h4>It seems that your cart is empty.</h4>
+  <img class="empty-cart-image" src="assets/images/cart-empty.png">
+  <h4>Add some products to your cart!</h4>
+</div>
+<div class="card-paid-order" [hidden]="this.orderService.paidFor==false">
+  <h4 style="color: green">Thanks for your order!</h4>
+</div>
+<div class="card" [hidden]="this.orderService.subtotal<=0">
+    <p-table [value]="orderService.order" >
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Name</th>
+                <th>#</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr [pSelectableRow]="product">
+                <td>{{product.name}}</td>
+                <td>{{product.quantity}}</td>
+                <td>€ {{product.price*product.quantity }}</td>
+                <td><i class="pi pi-trash" style="cursor:pointer;" (click)=onRemoveProduct(product)></i></td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
 <hr>
 <div class="subtotal">
-  <div class="subtotal-label">
+  <div class="subtotal-label" [hidden]="this.orderService.paidFor==true">
     <h2>Subtotal:</h2>
   </div>
-  <div class="subtotal-amount">
-    <!-- <h2><b>€ {{ subtotal }}</b></h2> -->
+  <div class="subtotal-amount" [hidden]="this.orderService.paidFor==true">
+    <h2><b> € {{ this.orderService.subtotal }}</b></h2>
   </div>
 </div>
 <hr>
-<!-- <button pButton pRipple id="empty-button" type="button" label="Empty Cart" class="p-button-secondary" style="margin:auto; width:100%; margin-bottom:6px;" (click)=onEmptyCart()></button> -->
+<!-- <div class="discount">
+  <span class="p-input-icon-right" style="margin:auto; width:100%; margin-bottom:6px;">
+    <input type="text" pInputText style="margin:auto; width:76%; margin-right:8px; text-transform:uppercase;" placeholder="Discount Code" [(ngModel)]="discount"/>
+    <p-button class ="apply-button" label="Apply" icon="pi pi-check" [disabled]="discount==''"></p-button>
+</span>
+</div> -->
+<button pButton pRipple id="empty-button" type="button" label="Empty Cart" class="p-button-secondary" style="margin:auto; width:100%; margin-bottom:6px;" (click)=onEmptyCart() [disabled]="this.orderService.subtotal<=0"></button>
 <!-- <button pButton pRipple type="button" label="Order Now" class="p-button-secondary" style="margin:auto; width:100%;" ></button> -->
+<div #paypal style="margin-top:6px;" [hidden]="this.orderService.subtotal<=0"></div>

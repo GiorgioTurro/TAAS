@@ -13,7 +13,7 @@ const cabecera = {headers: new HttpHeaders({'Content-Type' : 'application/json'}
 })
 export class OauthService {
 
-  oauthURL = 'http://localhost:7777/oauth/';
+  oauthURL = 'http://192.168.49.2:30001/oauth/';
 
   constructor(private httpClient: HttpClient) { }
 

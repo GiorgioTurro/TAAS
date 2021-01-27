@@ -11,21 +11,19 @@ import { HomeComponent } from './home/home.component';
 import { MapComponent } from './map/map.component';
 import { CartComponent } from './cart/cart.component';
 import { ShopComponent } from './shop/shop.component';
-import { MenuComponent } from './shop/menu/menu.component';
-import { CategoryComponent } from './shop/menu/category/category.component';
+import { MenuComponent } from './menu/menu.component';
+import { CategoryComponent } from './menu/category/category.component';
 import { TableModule } from 'primeng/table';
 import { MarkerService } from './_services/marker.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PopUpService } from './_services/popup.service';
 import { FacebookComponent } from './facebook/facebook.component';
 import { UsersListComponent } from './users-list/users-list.component';
-
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import {
   GoogleLoginProvider,
   FacebookLoginProvider
 } from 'angularx-social-login';
-
 
 @NgModule({
   declarations: [
@@ -39,7 +37,7 @@ import {
     MenuComponent,
     CategoryComponent,
     FacebookComponent,
-    UsersListComponent,
+    UsersListComponent
       ],
   imports: [
     BrowserModule,
@@ -60,12 +58,12 @@ import {
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              'google client id'
+              '917904852943-1afvumvpn33hv9gjedpeet9ehrp34ljm.apps.googleusercontent.com'
             ),
           },
           {
             id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('fb client'),
+            provider: new FacebookLoginProvider('3713289542049565'),
           },
         ],
       } as SocialAuthServiceConfig,

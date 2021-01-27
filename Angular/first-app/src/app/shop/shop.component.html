@@ -1,22 +1,20 @@
 <div class="card">
-    <p-table [value]="shops" selectionMode="single" [(selection)]="selectedShop" >
+    <p-table class="shop-table" [value]="shops" selectionMode="single" [(selection)]="selectedShop">
         <ng-template pTemplate="header">
             <tr>
                 <th>Name</th>
                 <th>Address</th>
-                <th>City</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-shop>
-            <tr [pSelectableRow]="shop">
+            <tr [pSelectableRow]="shop" (click)="onShowMenu(shop); onPassShopName(shop.name); toggleMenu(shop.name);">
                 <td>{{shop.name}}</td>
                 <td>{{shop.address}}</td>
-                <td>{{shop.city}}</td>
             </tr>
         </ng-template>
     </p-table>
 </div>
-<div class="card">
+<!-- <div class="card">
     <p-table [value]="selectedShop.menu" *ngIf="selectedShop!==null">
         <ng-template pTemplate="header">
             <tr>
@@ -39,4 +37,4 @@
             </tr>
         </ng-template>
     </p-table>
-</div>
+</div> -->

@@ -1,16 +1,59 @@
 @import "~leaflet/dist/leaflet.css";
 
 .map-frame {
-  position: absolute;
-  /* border: 2px solid black; */
+  position: relative;
+   border: 2px solid black;
   /* margin: 0; */
   /* padding: 0; */
-  height: 50%;
-  width: 750px;
-  margin: auto;
+  height: 100%;
+  width: 100%;
+  /* bottom: 8px; */
 }
 
 #map {
   height: 100%;
-  width: auto;
+  width: 100%;
+  position: absolute;
+}
+body{
+  position: relative;
+  height: 100%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .map-frame {
+    position: absolute;
+     border: 2px solid red;
+    /* margin: 0; */
+    /* padding: 0; */
+    height: 50%;
+    width: 750px;
+    margin: auto;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.leaflet-popup-content {
+  background-color: #fbb324;
+  border: solid 3px #312004;
+  color: #312004;
+  font-size: 14px;
+}
+
+.leaflet-popup-tip-container {
+  background-color: #fbb324;
+  border: solid 3px #312004;
+  color: #312004;
+  font-size: 14px;
+}
+.leaflet-popup-content-wrapper {
+            background-color: #fbb324;
+            border: solid 3px #312004;
+            color: #312004;
+            font-size: 14px;
 }

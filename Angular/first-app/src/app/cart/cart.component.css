@@ -25,10 +25,40 @@
 }
 
 .subtotal{
-  display: -webkit-inline-box;
-  align-items: flex-end;
+  width: 100%;
+  display: flex;
 }
 
 button{
   margin: 6px;
+}
+
+.subtotal-amount{
+width: 50%;
+text-align: right;
+margin-right: 100px;
+}
+
+.subtotal-label{
+width: 50%;
+margin-left: 12px;
+}
+
+.discount{
+  width: 100%;
+}
+
+.empty-cart-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h4{
+  text-align: center;
+  color:#607D8B;
+}
+th, td {
+  text-align: center !important;
 }

@@ -1,7 +1,11 @@
+
 <header>
   <img src="assets\images\header-img.jpg" alt="beers">
 </header>
 <body>
+  <div class="card-empty-cart" [hidden]="this.loginService.loggedIn==true">
+    <h4>Forse dovresti loggare prima</h4>
+  </div>
   <div class="p-grid">
     <div class="p-col-3">
       <app-shop></app-shop>
@@ -10,12 +14,30 @@
         <app-map></app-map>
     </div>
     <div class="p-col-3">
+      <div class="p-grid">
+        <div class="p-col-11 user-panel">
+          <table style="width:100%;">
+            <tr style="width:100%;">
+              <td style="width:90%;">
+                <div class="user-greet">
+                  <h3>Hello {{this.loginService.user.name}}! </h3>
+                </div>
+              </td>
+              <td style="text-align: right; width:10%;">
+                <div class="logout">
+                  <button pButton pRipple type="button" icon="pi pi-power-off" class="p-button-rounded p-button-outlined logout-button" (click)="signOut()"></button>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
       <app-cart></app-cart>
     </div>
   </div>
-  <div class="p-grid">
+  <div class="p-grid" [style.display] = "this.showService.show === true ? 'block' : 'none'">
     <div class="p-col-12">
-      <p>menu</p>
+      <app-menu></app-menu>
     </div>
   </div>
 </body>

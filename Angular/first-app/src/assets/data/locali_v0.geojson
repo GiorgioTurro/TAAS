@@ -1,0 +1,8 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type":"Feature", "geometry":{ "type":"Point", "coordinates":[7.6955659, 45.0646803]}, "properties":{"name":"Jumping", "type":"pub", "address": "Via Roma, 102", "city":"Torino"}},
+    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.683251, 45.064412]}, "properties":{"name":"Clorophilla", "type":"BelLocale", "address": "Corso Lecce, 12", "city":"Torino"}},
+    {"type":"Feature","geometry":{ "type":"Point", "coordinates":[7.659841, 45.071133]}, "properties":{"name":"Irish Pub", "type":"Pub", "address": "Viale Nizza, 38", "city":"Torino"}}
+      ]
+}

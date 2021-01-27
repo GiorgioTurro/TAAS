@@ -15,13 +15,14 @@ export class MapComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.initMap();
-    this.markerService.makeCapitalMarkers(this.map);
+    this.markerService.makeLocalsMarkers(this.map);
+
   }
 
   private initMap(): void {
     this.map = L.map('map', {
       center: [ 45.0646803, 7.6955659 ],
-      zoom: 13
+      zoom: 16
     })
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,

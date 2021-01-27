@@ -1,13 +1,13 @@
-import { Product } from "./shared/product.model";
+import { Product } from "../shared/product.model";
 export class Shop {
+    public id: string;
     public name: string;
     public address: string;
-    public city: string;
     public menu: Product[];
-    constructor(name: string, address: string, city: string, menu: Product[]){
+    constructor(id:string, name: string, address: string, menu: Product[]){
+        this.id = id
         this.name=name;
         this.address=address;
-        this.city=city;
         this.menu=menu;
     }
 }

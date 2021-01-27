@@ -1,0 +1,19 @@
+
+tr, th, span{
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+}
+h2{
+  width: 100%;
+  text-align: center;
+}
+
+
+span{
+  padding: 15px;
+  vertical-align: super;
+}
+
+th, td {
+  text-align: center !important;
+}
